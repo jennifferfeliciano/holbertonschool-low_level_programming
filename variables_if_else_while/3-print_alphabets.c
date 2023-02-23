@@ -10,7 +10,7 @@ int main(void)
 {
 	char character = 'a';
 	char character_uppercase = 'A';
-	
+
 	while (character <= 'z')
 	{
 		putchar(character);
