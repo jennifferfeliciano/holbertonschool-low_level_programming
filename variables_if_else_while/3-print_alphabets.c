@@ -9,7 +9,8 @@
 int main(void)
 {
 	char character = 'a';
-
+	char character_uppercase = 'A';
+	
 	while (character <= 'z')
 	{
 		putchar(character);
@@ -17,15 +18,12 @@ int main(void)
 		character++;
 	}
 
-	char character_uppercase = 'A';
-
 	while (character_uppercase <= 'Z')
 	{
 		putchar(character_uppercase);
 
 		character_uppercase++;
 	}
-
 
 	putchar('\n');
 
