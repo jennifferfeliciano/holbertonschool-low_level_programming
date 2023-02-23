@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ *Main- Entry point
+ *Return: Always 0
+ */
+
 int main(void)
 {
 	char character = 'a';
@@ -9,9 +14,10 @@ int main(void)
 	{
 		putchar(character);
 
-		putchar('\n');
-
 		character++;
 	}
+
+	putchar('\n');
+
 	return (0);
 }
