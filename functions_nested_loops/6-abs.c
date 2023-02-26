@@ -2,7 +2,7 @@
 
 /**
  *_abs- return an absolute value
- *n: numbrer to check for absolute value
+ *@n: numbrer to check for absolute value
  *Return: absolute value of a number or 0
  */
 
