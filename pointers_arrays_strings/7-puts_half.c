@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- *
- *
+ *puts_half- funtion that prints half of a string
+ *@str: string to print half of
+ *Return: void
  */
 
 void puts_half(char *str)
@@ -15,14 +16,14 @@ void puts_half(char *str)
 	counter++;
 	}
 
-	if (counter % 2 == 1)
+	if (counter % 2 == 0)
 	{
-	n = (counter - 1) / 2;
+	n = (counter) / 2;
 	}
 
 	else
 	{
-	n = counter / 2;
+	n = (counter - 1) / 2;
 	}
 
 	for ( ; n <= counter ; n++)
