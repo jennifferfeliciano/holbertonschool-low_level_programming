@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *main- Entry point
+ *jack_bauer- funtion that prints every minute from 00:00 to 23:59
  *Return: void
  */
 
