@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- *_strcat- 
- *
+ *_strcat- function that concatenates two strings
+ *@dest: the string that will append to src.
+ *@src: the second string
+ *Return: concatenated strings
  */
 
 char *_strcat(char *dest, char *src)
@@ -22,7 +24,7 @@ char *_strcat(char *dest, char *src)
 	}
 
 	for ( ; length <= counter; length++)
-		
+
 	{
 		dest[dest_length] = src[length];
 		dest_length++;
