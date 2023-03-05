@@ -17,32 +17,31 @@ void times_table(void)
 
 			if (mult > 9)
 			{
+
 				first_digit = mult / 10;
 				last_digit = mult % 10;
 
+				_putchar(' ');
 				_putchar(first_digit + '0');
 				_putchar(last_digit + '0');
-				
+
 				if (y < 9)
 				{
 					_putchar(',');
-					_putchar(' ');
 				}
 			}
 			else
 			{
+				_putchar(' ');
+				_putchar(' ');
 				_putchar(mult + '0');
-				
-				if (y < 9)
-					{	
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
 
+				if (y < 9)
+				{
+					_putchar(',');
+				}
 			}
 		}
 		_putchar('\n');
-		
 	}
 }
