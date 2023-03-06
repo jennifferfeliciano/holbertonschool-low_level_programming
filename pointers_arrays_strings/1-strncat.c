@@ -2,7 +2,7 @@
 
 /**
  *_strncat- function that concatenates two strings
- *@dest: the string that will append to src.
+ *@dest: the string that will append to src
  *@src: the second string
  *@n: bytes from src
  *Return: concatenated strings
@@ -23,7 +23,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		dest_length++;
 	}
-	
+
 	for (length = 0; src[length] && length < n; length++)
 	{
 		dest[dest_length] = src[length];
