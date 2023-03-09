@@ -8,9 +8,9 @@
 
 int _atoi(char *s)
 {
-	int counter = 0, sum = 0, mult = 1, sign = 1, flag = 0;
+	int counter, sum = 0, mult = 1, sign = 1, flag = 0;
 
-	for (; s[counter] != '\0'; counter++)
+	for ( counter = 0; s[counter] != '\0'; counter++)
 	{
 		if (s[counter] == '-')
 		{
