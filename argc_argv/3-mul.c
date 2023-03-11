@@ -9,13 +9,19 @@
  *Return: zero if success, return 1 if there is an error
  */
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	int first_number, second_number, mult;
-	
-	if (argc < 2)
+
+	if (argc <= 2)
 	{
-		printf("error");
+		printf("Error\n");
+		return (1);
+	}
+
+	else if (argc > 3)
+	{
+		printf("Error\n");
 		return (1);
 	}
 
