@@ -2,8 +2,7 @@
 
 /**
  *main- Entry point
- *@n: numbers to be checked
- *return: zero
+ *Return: zero
  */
 
 int main(void)
@@ -18,7 +17,14 @@ int main(void)
 		}
 		else if (n % 5 == 0 && n % 3 != 0)
 		{
+			if (n == 100)
+			{
+				printf("Buzz");
+			}
+			else
+			{
 			printf("Buzz ");
+			}
 		}
 		else if (n % 3 == 0 && n % 5 == 0)
 		{
@@ -29,5 +35,6 @@ int main(void)
 			printf("%d ", n);
 		}
 	}
+	printf("\n");
 	return (0);
 }
