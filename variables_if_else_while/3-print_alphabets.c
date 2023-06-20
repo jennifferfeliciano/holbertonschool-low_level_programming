@@ -14,7 +14,7 @@ int main(void)
 	for (; letter <= 'z'; letter++)
 		putchar(letter);
 	for (; uppercase_letter <= 'Z'; uppercase_letter++)
-		putchar(letter);
+		putchar(uppercase_letter);
 	putchar('\n');
 	return (0);
 }
