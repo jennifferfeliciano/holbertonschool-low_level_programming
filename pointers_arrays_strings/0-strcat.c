@@ -9,13 +9,12 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *counter = dest;
-
-	for (; *counter != '\0'; counter++)
+	int a = 0;
+	for (; dest[a] != '\0'; a++)
 	{
 	}
-	for (; *src != '\0'; src++, counter++)
-		*counter = *src;
-	*counter = '\0';
+	for (; *src != '\0'; src++, a++)
+		dest[a] = *src;
+	dest[a] = '\0';
 return (dest);
 }
