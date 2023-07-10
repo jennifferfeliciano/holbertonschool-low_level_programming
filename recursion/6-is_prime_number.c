@@ -18,7 +18,7 @@ int prime(int n, int d)
 }
 
 /**
- *_is_prime_number- function that checks if prime
+ *is_prime_number- function that checks if prime
  *@n: number to be check
  *Return: 1 if n is a prime number or 0 otherwise.
  */
