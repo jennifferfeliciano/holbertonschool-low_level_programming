@@ -20,7 +20,7 @@ if (size == 0)
 }
 
 array = malloc(size * sizeof(char));
-	if (NULL)
+	if (array == NULL)
 	{
 		return (NULL);
 	}
