@@ -58,7 +58,7 @@ void print_all(const char * const format, ...)
 					{
 						isStringNil = 1;
 					}
-					else
+					if (s != NULL)
 					{
 						printf("%s", s);
 					}
