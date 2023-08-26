@@ -6,57 +6,76 @@
  *@format:The format string specifying the types of arguments to be printed.
  *Return:void
  */
+
 void print_all(const char * const format, ...)
 {
-	int i = 0, num, is_first;
-	char c, *s;
+	int i = 0;
+	int num;
+	char c;
+	char *s;
 	float f;
+	int isFirst;
 
 	va_list args;
 
 	va_start(args, format);
-	is_first = 1;
+
+	isFirst = 1;
 
 	while (format[i] != '\0')
 	{
+		char formatChar = format[i];
+		int formatMatched = (formatChar == 'c') | (formatChar == 'i') | (formatChar == 'f') | (formatChar == 's');
+		int isStringNil = 0;
 
-		if (format[i] == 'c')
+		if (formatMatched)
 		{
-			if (!is_first)
-				printf(", ");
-
-			c = (char)va_arg(args, int);
-			printf("%c", c);
-		}
-		else if (format[i] == 'i')
-		{
-			if (!is_first)
-				printf(", ");
-			num = va_arg(args, int);
-			printf("%d", num);
-		}
-		else if (format[i] == 'f')
-		{
-			if (!is_first)
-				printf(", ");
-			f = (float)va_arg(args, double);
-			printf("%f", f);
-		}
-		else if (format[i] == 's')
-		{
-			if (!is_first)
+			if (!isFirst)
 			{
 				printf(", ");
-				s = va_arg(args, char *);
 			}
-			if (s == NULL)
+
+			switch (formatChar)
+			{
+				case 'c':
+					c = (char)va_arg(args, int);
+					printf("%c", c);
+					break;
+
+				case 'i':
+					num = va_arg(args, int);
+					printf("%d", num);
+					break;
+
+				case 'f':
+					f = (float)va_arg(args, double);
+					printf("%f", f);
+					break;
+
+				case 's':
+					s = va_arg(args, char *);
+					if (s == NULL)
+					{
+						isStringNil = 1;
+					}
+					else
+					{
+						printf("%s", s);
+					}
+					break;
+			}
+
+			if (isStringNil)
+			{
 				printf("(nil)");
-			else
-				printf("%s", s);
+			}
+
+			isFirst = 0;
 		}
-		is_first = 0;
+
 		i++;
 	}
+
 	va_end(args);
 	printf("\n");
 }
