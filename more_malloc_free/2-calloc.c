@@ -5,7 +5,7 @@
  *_calloc-Allocates memory for an array, initializing memory to zero.
  *@nmemb:Number of elements in the array.
  *@size:Size of each element in bytes.
- *Return-A pointer to the allocated memory, or NULL on failure.
+ *Return: A pointer to the allocated memory, or NULL on failure.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
